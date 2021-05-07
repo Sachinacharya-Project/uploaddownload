@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>File Upload Progress Bar | HTML CSS JS</title>
+</head>
+<body>
+    <a class="back" href="/">Back</a>
+    <div class="progress_bar">
+        <div class="juice">
+            <div class="progress_fill" id="progress_fill"></div>
+        </div>
+        <div class="info">Uploaded: <span id="info">0%</span></div> 
+    </div>
+    <form method="post" action="./upload_handle.php" class="active" enctype="multipart/form-data" id="form">
+        <h1>Upload File</h1>
+        <div class="choosing">
+            <input type="file" name="files" id="files" hidden>
+            <label for="files">Choose File</label>
+            <p id="filename">File name is here</p>
+        </div>
+        <div class="sending">
+            <button class="upload_btn" id="btn">Upload</button>
+        </div>
+    </form>
+    <div class="imagebox" id="imagebox">
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

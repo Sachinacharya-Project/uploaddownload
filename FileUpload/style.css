@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  background-color: #00afaf;
+}
+
+.back {
+  text-decoration: none;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 6px;
+  width: 100px;
+  background-color: #3ee7fd;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.progress_bar {
+  width: 400px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 10px 6px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+}
+
+.progress_bar .juice {
+  width: 100%;
+  height: 14px;
+  background: #aaaaaa;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.progress_bar .progress_fill {
+  width: 0%;
+  height: 100%;
+  background: orangered;
+  border-radius: 6px;
+  -webkit-transition: 0.3s width linear;
+  transition: 0.3s width linear;
+}
+
+.progress_bar .info {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  font-weight: bold;
+}
+
+form {
+  width: 400px;
+  background: #fff;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0.3s all linear;
+  transition: 0.3s all linear;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+form.active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+form .choosing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+form .choosing label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  padding: 9px;
+  background-color: #00afaf;
+  border-radius: 3px;
+  width: 100px;
+  text-align: center;
+  color: white;
+}
+
+form .choosing p {
+  width: calc(100% - 110px);
+  padding: 0px 0 0 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 33px;
+}
+
+form .sending {
+  width: 100%;
+}
+
+form .sending button {
+  width: 100%;
+  padding: 7px;
+  outline: none;
+}
+
+form h1 {
+  padding: 14px 20px 20px 20px;
+  text-align: center;
+  color: #00afaf;
+}
+
+.imagebox {
+  width: 400px;
+  height: 300px;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 0.3s all linear;
+  transition: 0.3s all linear;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  position: absolute;
+  top: 259px;
+}
+
+.imagebox.active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.imagebox img {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.imagebox video {
+  border-radius: 10px;
+  height: 100%;
+}
+/*# sourceMappingURL=style.css.map */

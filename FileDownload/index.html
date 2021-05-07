@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>File Download Progress Bar | HTML CSS JS</title>
+</head>
+<body>
+    <a class="back" href="/">Back</a>
+    <div class="progress_bar">
+        <div class="juice">
+            <div class="progress_fill" id="progress_fill"></div>
+        </div>
+        <div class="info">Downloaded: <span id="info">0%</span></div> 
+    </div>
+    <form method="post" action="./upload_handle.php" enctype="multipart/form-data" id="form">
+        <h1>Download File</h1>
+        <div class="choosing">
+            <a id='downloader'></a>
+            <label for="files">Filename</label>
+            <p id="filename">Pooze Hedge</p>
+        </div>
+        <div class="sending">
+            <button class="download_btn" id="btn">Download</button>
+        </div>
+    </form>
+    <script src="./app.js"></script>
+</body>
+</html>
