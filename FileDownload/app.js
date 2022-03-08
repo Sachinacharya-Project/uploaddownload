@@ -36,7 +36,7 @@ upload_form.addEventListener("submit", (e)=>{
 /**
  * download handling functions
  */
-const filename = "./downloads/brolaughter__145866431_865219904278376_3574643187548671120_n.mp4";
+const filename = "./1115643.jpg";
 const bar = $("progress_fill")
 const info = $("info")
 const upload_handler = ()=>{
@@ -63,6 +63,8 @@ const upload_handler = ()=>{
     xhr.addEventListener("abort", cancle_handle, false)
 }
 
+let remtime
+
 const progress_handle = (event)=>{
     const duration = (new Date().getTime() - starttime) / 1000
     const bps = event.loaded / duration
@@ -71,11 +73,12 @@ const progress_handle = (event)=>{
     const kb = Math.round(event.loaded / 1024)
     bar.style.width = total+"%"
     bar.style.background = "orangered"
+    remtime = total
     info.textContent = `${Math.round(total)}% (${kb} KB / ${Math.round(event.total / 1024)} KB)(${remaining_time} Sec)(${Math.round(bps / 1024)} KBPS)`;
 }
 
 const onload_handler = (event)=>{
-    bar.style.width = "0%"
+    bar.style.width = "100%"
     info.textContent = "Completed"
     $("downloader").click()
     toggle()
@@ -88,7 +91,7 @@ const error_handler = (event)=>{
 
 const cancle_handle = (event)=>{
     const total = Math.round((event.loaded / event.total) * 100)
-    info.textContent = `Cancled at ${total}%`
+    info.textContent = `Cancled at ${Math.round(remtime)}%`
 }
 
 const cancle_download = ()=>{

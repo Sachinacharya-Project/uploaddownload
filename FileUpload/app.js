@@ -81,7 +81,7 @@ const progress_handle = (event)=>{
 const onload_handler = (event)=>{
     upload_form.reset()
     $("filename").textContent = "Filename will be here"
-    bar.style.width = "0%"
+    bar.style.width = "100%"
     info.textContent = "Completed"
     toggle()
     display()
